@@ -49,14 +49,10 @@ My initial hypothesis is that I will be able to create a model that beats 50% ac
 - Draw conclusions
 
 
-====================================================================================
-
-
-
 # data dictionary
 
 
-====================================================================================
+<table><tr><td class="border_l border_r border_t border_b selected"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;"><p><span>taxvaluedollarcnt</span></p></div></div></td><td class="border_l border_r border_t border_b selected" style="border-right-width: 1px; border-right-color: inherit;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>Tax assessed values of Single Family Properties</span></p><p><span>that had a transaction during 2017.</span></p></div></div></td></tr><tr><td class="border_l border_r border_t border_b selected"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>bedroomcnt</span></p></div></div></td><td class="border_l border_r border_t border_b selected" style="border-right-width: 1px; border-right-color: inherit;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>The amount of bedrooms of Single Family Properties</span></p><p><span>that had a transaction during 2017</span></p></div></div></td></tr><tr><td class="border_l border_r border_t border_b selected"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>calculatedfinishedsquarefeet</span></p></div></div></td><td class="border_l border_r border_t border_b selected" style="border-right-width: 1px; border-right-color: inherit;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>The amount of Square feet of Single Family Properties</span></p><p><span>that had a transaction during 2017</span></p></div></div></td></tr><tr><td class="border_l border_r border_t border_b selected"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>bathroomcnt</span></p></div></div></td><td class="border_l border_r border_t border_b selected" style="border-right-width: 1px; border-right-color: inherit;"><div class="wrap"><div style="margin: 10px 5px;" class="" contenteditable="false"><p><span>The amount of bathrooms of Single Family Properties</span></p><p><span>that had a transaction during 2017</span></p></div></div></td></tr><tr><td class="border_l border_r border_t border_b selected"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;"><p><span>yearbuilt</span></p></div></div></td><td class="border_l border_r border_t border_b selected"><div class="wrap"><div class="" contenteditable="false" style="margin: 10px 5px;"><p><span>The year built of Single Family Properties</span></p><p><span>that had a transaction during 2017</span></p></div></div></td></tr></table>
 
 
 # Steps to Reproduce
