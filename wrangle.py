@@ -118,7 +118,7 @@ def scaler_quantile_normal(X_train, X_validate, X_test):
     with the hyperperameter output_distribution == 'normal'
     '''
     scaler = QuantileTransformer(output_distribution='normal')
-    return scaler.fit_transform(X_train), scaler.fit_transform(X_validate), scaler.fit_transform(X_test)
+    return scaler.fit_transform(X_train), scaler.transform(X_validate), scaler.transform(X_test)
 
 
 def scaler_quantile_default(X_train, X_validate, X_test):
@@ -126,7 +126,7 @@ def scaler_quantile_default(X_train, X_validate, X_test):
     takes in data and uses a QuantileTransformer on it
     '''
     scaler = QuantileTransformer()
-    return scaler.fit_transform(X_train), scaler.fit_transform(X_validate), scaler.fit_transform(X_test)
+    return scaler.fit_transform(X_train), scaler.transform(X_validate), scaler.transform(X_test)
 
 
 def scaler_min_max(X_train, X_validate, X_test):
@@ -134,7 +134,7 @@ def scaler_min_max(X_train, X_validate, X_test):
     takes train, test, and validate data and uses the min max scaler on it
     '''
     scaler = MinMaxScaler()
-    return scaler.fit_transform(X_train), scaler.fit_transform(X_validate), scaler.fit_transform(X_test)
+    return scaler.fit_transform(X_train), scaler.transform(X_validate), scaler.transform(X_test)
 
 
 def scaler_robust(X_train, X_validate, X_test):
@@ -142,7 +142,7 @@ def scaler_robust(X_train, X_validate, X_test):
     takes train, test, and validate data and uses the RobustScaler on it
     '''
     scaler = RobustScaler()
-    return scaler.fit_transform(X_train), scaler.fit_transform(X_validate), scaler.fit_transform(X_test)
+    return scaler.fit_transform(X_train), scaler.transform(X_validate), scaler.transform(X_test)
 
 
 def standard_scaler(X_train, X_validate, X_test):
@@ -150,7 +150,7 @@ def standard_scaler(X_train, X_validate, X_test):
     takes train, test, and validate data and uses the standard_scaler on it
     '''
     scaler = StandardScaler()
-    return scaler.fit_transform(X_train), scaler.fit_transform(X_validate), scaler.fit_transform(X_test)
+    return scaler.fit_transform(X_train), scaler.transform(X_validate), scaler.transform(X_test)
 
 
 def rfe(X_train, y_train, the_k):
@@ -270,7 +270,7 @@ def get_model_numbers(X_train, X_validate, X_test, y_train, y_validate, y_test):
     metrics_validate_df.loc[3] = ['Polynomial Regression(poly2)', rmse, r2]
 
 
-    glm = TweedieRegressor(power=1, alpha=0)
+    glm = TweedieRegressor(power=2, alpha=0)
     glm.fit(X_train, y_train)
     pred_glm = glm.predict(X_train)
     rmse, r2 = metrics_reg(y_train, pred_glm)
@@ -290,7 +290,7 @@ def get_model_numbers(X_train, X_validate, X_test, y_train, y_validate, y_test):
     metrics_train_df.rmse = metrics_train_df.rmse.astype(int)
     metrics_validate_df.rmse = metrics_validate_df.rmse.astype(int)
     metrics_test_df.rmse = metrics_test_df.rmse.astype(int)
-
+    print()
     metrics_train_df.r2 = (metrics_train_df.r2 * 100).astype(int)
     metrics_validate_df.r2 = (metrics_validate_df.r2 * 100).astype(int)
     metrics_test_df.r2 = (metrics_test_df.r2 * 100).astype(int)
